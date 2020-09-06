@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import memberList from './memberList';
+import Member from './components/Member';
 import './App.css';
 
 function App() {
@@ -13,7 +14,10 @@ function App() {
         <h1>Members</h1>
       </header>
       <div>
-        <h2>List Members</h2>
+        {/* <h2>List Members</h2> */}
+        {members.map((member) => (
+          <Member key={member.id} name={member.name} role={member.role}/>
+        ))}
       </div>
     </div>
   );
