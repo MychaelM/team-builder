@@ -6,6 +6,7 @@ const Member = (props) => {
     <div>
       <h4>{props.name}</h4>
       <p>{props.role}</p>
+      <p>{props.email}</p>
     </div>
   )
 }

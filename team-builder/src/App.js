@@ -13,7 +13,8 @@ function App() {
     const newMember = {
       id: Date.now(),
       name: formData.name,
-      role: formData.role
+      role: formData.role,
+      email: formData.email
     }
 
     setMembers([...members, newMember]);
@@ -28,7 +29,10 @@ function App() {
       <div>
         {/* <h2>List Members</h2> */}
         {members.map((member) => (
-          <Member key={member.id} name={member.name} role={member.role}/>
+          <Member key={member.id} 
+          name={member.name} 
+          role={member.role} 
+          email={member.email}/>
         ))}
       </div>
     </div>
